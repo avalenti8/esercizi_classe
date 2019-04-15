@@ -99,13 +99,107 @@ import requests
         #print(response.json())
 
 #10
-a = requests.get("http://192.168.1.231:8080/esercizi/10",headers={"x-data":"true"})
+        #a = requests.get("http://192.168.1.231:8080/esercizi/10",headers={"x-data":"true"})
+        #body = a.json()
+        #print(body["message"])
+        #b = body["data"]
+        #r = []
+        #for i in b:
+        #  r.append(i)
+        #r.sort()    
+        #response = requests.post("http://192.168.1.231:8080/esercizi/10",json={"data":r})
+        #print(response.json())
+
+#11
+        #a = requests.get("http://192.168.1.231:8080/esercizi/11",headers={"x-data":"true"})
+        #body = a.json()
+        #print(body["message"])
+        #b = body["data"]
+        #r = []
+        #for i in b:
+        #  r.append(i.lower())
+        #r.sort()
+        #response = requests.post("http://192.168.1.231:8080/esercizi/11",json={"data":r})
+        #print(response.json())
+
+#12
+        #a = requests.get("http://192.168.1.231:8080/esercizi/12",headers={"x-data":"true"})
+        #body = a.json()
+        #b = body["data"]
+        #r = []
+        #for i in b:
+        #  r.append(i-1)
+        #response = requests.post("http://192.168.1.231:8080/esercizi/12",json={"data":r})
+        #print(response.json())
+
+#13
+        #a = requests.get("http://192.168.1.231:8080/esercizi/13",headers={"x-data":"true"})
+        #body = a.json()
+        #b = body["data"]
+        #r = []
+        #for i in range(len(b)):
+        #  if i != len(b)-1: 
+        #    c = b[i] + b[i+1]
+        #    r.append(c)
+        #  else:
+        #    r.append(b[i])
+        #response = requests.post("http://192.168.1.231:8080/esercizi/13",json={"data":r})
+        #print(response.json())
+
+#14
+        #a = requests.get("http://192.168.1.231:8080/esercizi/14",headers={"x-data":"true"})
+        #body = a.json()
+        #b = body["data"]
+        #r = {
+        #        "positivi":0,
+        #        "negativi":0,
+        #        "zeri":0
+        #}
+        #for i in b:
+        #  if i > 0:
+        #    r["positivi"] += 1
+        #  elif i < 0:
+        #    r["negativi"] += 1
+        #  if i == 0:
+        #    r["zeri"] += 1
+        #response = requests.post("http://192.168.1.231:8080/esercizi/14",json={"data":r})
+        #print(response.json())
+
+#15
+        #a = requests.get("http://192.168.1.231:8080/esercizi/15",headers={"x-data":"true"})
+        #body = a.json()
+        #b = body["data"]
+        #r = []
+        #for i in b:
+        #  if len(i)%2 == 0:
+        #    r.append(i.upper())
+        #  else:
+        #    r.append(i.lower())
+        #response = requests.post("http://192.168.1.231:8080/esercizi/15",json={"data":r})
+        #print(response.json())
+
+#16
+        #a = requests.get("http://192.168.1.231:8080/esercizi/16",headers={"x-data":"true"})
+        #body = a.json()
+        #b = body["data"]
+        #r = ""
+        #for i in b:
+        #  if i != b[-1]:
+        #    r = r + i + " "
+        #  else:
+        #    r = r + i
+        #response = requests.post("http://192.168.1.231:8080/esercizi/16",json={"data":r})
+        #print(response.json())
+
+#17
+a = requests.get("http://192.168.1.231:8080/esercizi/17",headers={"x-data":"true"})
 body = a.json()
-print(body["message"])
 b = body["data"]
 r = []
 for i in b:
-  r.append(i)
-r.sort()    
-response = requests.post("http://192.168.1.231:8080/esercizi/10",json={"data":r})
+  if i != b[-1]:
+    r = r + i[-1] + " "
+  else:
+    r = r + i[-1]
+response = requests.post("http://192.168.1.231:8080/esercizi/17",json={"data":r})
 print(response.json())
